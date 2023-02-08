@@ -1,0 +1,248 @@
+:root {
+  --font-family-header: 'Cabin Sketch', cursive;
+  --role-high-interest: #76fa80;
+  --role-some-interest: #f4ca60;
+  --role-minor-interest: #f2a35e;
+  --role-low-interest: #d75654;
+  --main-bg-color: #17161b;
+  --main-card-bg-color: #212024;
+  --main-card-border-color: #39363a;
+  --main-card-color: #cbcbcb;
+  --main-text-color: #1c1c1c;
+  --roles-alt-bg-color: #262327;
+  --roles-text-color: #cb4bbe;
+  --roles-favoured-bg-color: #551f44;
+  --stat-awful-color: #9a989a;
+  --stat-good-color: #e8ea5d;
+  --stat-great-color: #74f77e;
+  --stat-poor-color: #eee5e5;
+  --stat-color: #dddddd;
+  --stat-subhead-color: #908f91;
+  --stat-strength-bg-color: #313931;
+  --stat-strength-border-color: #89ba82;
+}
+
+.cv-body {
+  background-color: var(--main-bg-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 1rem;
+}
+
+.info-header, .main-cv-content {
+  align-items: center;
+  background-color: var(--main-card-bg-color);
+  color: var(--main-card-color);
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  width: 90vw;
+}
+
+.main-cv-content {
+  background-color: var(--main-bg-color);
+  grid-template-columns: 25% 50% 25%;
+}
+
+.info-details {
+  display: grid;
+  gap: 0;
+  grid-auto-flow: column;
+  position: relative;
+}
+
+.info-details::after {
+  border-right: 2px solid var(--main-card-border-color);
+  content: '';
+  height: 80%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.info-contract {
+  display: grid;
+  gap: 0;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  position: relative;
+}
+
+.info-contract::after {
+  border-right: 2px solid var(--main-card-border-color);
+  content: '';
+  height: 80%;
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.emphasis {
+  font-weight: bolder;
+}
+
+.info-header > div > div > p {
+  margin: 0;
+  padding: 0;
+}
+
+.img-mugshot {
+  height: 30px;
+  width: 30px;
+}
+
+.info-roles {
+  background-color: var(--main-card-bg-color);
+  border-radius: 0.5rem;
+  height: 100%;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.roles-list {
+  padding-left: 1rem;
+}
+
+.roles-list > div > p {
+  margin: 0.5rem;
+}
+
+.role {
+  align-items: baseline;
+  border-radius: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  padding: 5px 5px 0 5px;
+}
+
+.role-favoured {
+  background-color: var(--roles-favoured-bg-color);
+}
+
+.role-alt {
+  background-color: var(--roles-alt-bg-color);
+  border-radius: 1rem;
+}
+
+.staff-roles-header {
+  color: var(--roles-text-color);
+}
+
+.high-interest {
+  background-color: var(--role-high-interest);
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.some-interest {
+  background: linear-gradient(90deg, var(--role-some-interest) 55%, #000000 55%);
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.minor-interest {
+  background: linear-gradient(90deg, var(--role-minor-interest) 48%, #000000 48%);
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.low-interest {
+  background: linear-gradient(90deg, var(--role-low-interest) 15%, #000000 15%);
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.stats-table {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.stats-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.skill-category {
+  color: var(--stat-subhead-color);
+  margin: 1rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.strength {
+  background-color: var(--stat-strength-bg-color);
+  border-bottom: 2px solid var(--main-bg-color);
+  border-left: 3px solid var(--stat-strength-border-color);
+}
+
+.skills-languages > div > p {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.skill-rating {
+  text-align: right !important;
+}
+
+.skill-high {
+  color: var(--stat-great-color);
+}
+
+.skill-good {
+  color: var(--stat-good-color);
+}
+
+.skill-poor {
+  color: var(--stat-poor-color);
+}
+
+.skill-awful {
+  color: var(--stat-awful-color);
+}
+
+.skill-name {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--main-card-border-color);
+  margin: 1rem 0;
+}
+
+.border-top {
+  border-top: 1px solid var(--main-card-border-color);
+}
+
+.info-personality {
+  align-items: flex-start;
+  height: 100%;
+  text-align: left;
+}
+
+.container {
+  font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container, .info-header, .main-cv-content {
+    display: block;
+  }
+
+  .cv-body {
+    padding: 0;
+    right: 0;
+  }
+}
